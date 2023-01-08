@@ -1,0 +1,96 @@
+@import "../../style.scss";
+
+.leftBar {
+  @include themify($themes) {
+    flex: 1.5;
+    position: sticky;
+    top: 50px;
+    height: calc(100vh - 51px);
+    overflow: scroll;
+    background-color: themed("bg");
+    color: themed("textColor");
+
+    @include mobile {
+      display: none;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .icon {
+      text-align: center;
+      font-family: "serif";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 61px;
+      padding-left: 2rem;
+    }
+    .logo {
+      //
+      font-size: 2rem;
+      position: absolute;
+      // top: rem;
+      margin-left: 2rem;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+    .container {
+      padding: 20px;
+      margin-top: 2rem;
+
+      hr {
+        margin: 20px 0px;
+        border: none;
+        height: 0.5px;
+        background-color: themed("border");
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        span {
+          font-size: 12px;
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          span {
+            font-size: 14px;
+          }
+        }
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+          img {
+            width: 30px;
+          }
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .item {
+      span {
+        display: none;
+      }
+    }
+  }
+}
