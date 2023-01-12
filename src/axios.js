@@ -9,7 +9,7 @@ const header = localStorage.getItem("accessToken")
     };
 
 const instance = axios.create({
-  baseURL: "https://socialista-p0x6.onrender.com/api",
+  baseURL: "https://api.liansocialmedia.ml/api",
   headers: header,
   withCredentials: true,
 });
