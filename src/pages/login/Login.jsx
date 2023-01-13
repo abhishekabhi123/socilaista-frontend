@@ -88,7 +88,7 @@ const Login = () => {
       });
     } catch (error) {
       console.log(error);
-      setErr(error.response.data);
+      setErr(error.response);
     }
   };
 
