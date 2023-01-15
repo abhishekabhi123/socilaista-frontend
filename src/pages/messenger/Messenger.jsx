@@ -62,7 +62,7 @@ export default function Messenger() {
     setIsOpen(false);
   }
   useEffect(() => {
-    socket.current = io("http://localhost:3000");
+    socket.current = io("http://localhost:4000");
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({
         sender: data.senderId,
